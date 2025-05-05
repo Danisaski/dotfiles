@@ -1,19 +1,23 @@
-# Installation: clone the dotfiles
+# Installation
+
+### Clone the dotfiles
 ```bash
 git clone --recurse-submodules https://github.com/Danisaski/dotfiles.git ~/dev
 ```
+
+#### With SSH privileges
 
 ```bash
 git clone --recurse-submodules git@github.com:Danisaski/dotfiles.git ~/dev
 ```
 
-# Make scripts executable
+### Make scripts executable
 ```bash
 cd ~/dev
 chmod +x setup.sh scripts/*.sh
 ```
 
-# Run the setup
+### Run the setup
 ```bash
 ./setup.sh
 ```
