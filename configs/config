@@ -1,0 +1,28 @@
+###############################################################################
+# Ghostty Configuration File 
+#
+# https://ghostty.io/docs/config-file/
+#
+# Key optimizations:
+#   • Transparent background using opacity.
+#   • Minimal window decorations.
+#   • Font tuned for code.
+################################################################################
+
+# Theme
+theme = GruvboxDark
+
+# Font settings
+font-family = "CaskaydiaCove Nerd Font Mono"
+font-size = 18.0
+
+# Window behavior
+background-opacity = 0.90  
+window-decoration = "none"   
+
+# fullscreen = true
+# maximize = true
+
+window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0

@@ -1,2 +1,165 @@
-# Example starship.toml
-add_newline = false
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$os\
+$username\
+[](bg:bg_statusline4 fg:yellow)\
+$directory\
+[](fg:bg_statusline4 bg:bg_statusline3)\
+$git_branch\
+$git_status\
+[](fg:bg_statusline3 bg:bg_statusline1)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:bg_statusline1 bg:bg_statusline3)\
+[](fg:bg_statusline3 bg:bg_statusline1)\
+$time\
+[](fg:bg_statusline1)\
+$line_break$character"""
+
+palette = 'gruvbox_material'
+
+[palettes.gruvbox_material]
+yellow = '#e9b143'
+fg0 = '#e2cca9'
+fg1 = '#ddc7a1'
+bg0 = '#282828'
+bg_statusline1 = '#32302f'
+bg_statusline2 = '#7c6f64'
+bg_statusline3 = '#504945'
+bg_statusline4 = '#a89984'
+green = '#689d6a'
+
+[os]
+disabled = false
+style = "bg:yellow fg:bg0"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:yellow fg:bg0"
+style_root = "bg:yellow fg:bg0"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:bg0 bg:bg_statusline4"
+format = "[ $path ]($style)"
+truncation_length = 6
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:bg_statusline3"
+format = '[[ $symbol $branch ](fg:fg0 bg:bg_statusline3)]($style)'
+
+[git_status]
+style = "bg:bg_statusline3"
+format = '[[($all_status$ahead_behind )](fg:fg0 bg:bg_statusline3)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:bg_statusline1"
+format = '[[ $symbol( $version) ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[c]
+symbol = " "
+style = "bg:bg_statusline1"
+format = '[[ $symbol( $version) ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:bg_statusline1"
+format = '[[ $symbol( $version) ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:bg_statusline1"
+format = '[[ $symbol( $version) ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[php]
+symbol = ""
+style = "bg:bg_statusline1"
+format = '[[ $symbol( $version) ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[java]
+symbol = ""
+style = "bg:bg_statusline1"
+format = '[[ $symbol( $version) ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:bg_statusline1"
+format = '[[ $symbol( $version) ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:bg_statusline1"
+format = '[[ $symbol( $version) ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[python]
+symbol = ""
+style = "bg:bg_statusline1"
+format = '[[ $symbol ($virtualenv)](fg:fg0 bg:bg_statusline1)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:bg_statusline3"
+format = '[[ $symbol( $context) ](fg:fg0 bg:bg_statusline3)]($style)'
+
+[conda]
+style = "bg:bg_statusline3"
+format = '[[ $symbol( $environment) ](fg:fg0 bg:bg_statusline3)]($style)'
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bg:bg_statusline3"
+format = '[[ $time ](fg:fg0 bg:bg_statusline1)]($style)'
+
+[line_break]
+disabled = true
+
+[character]
+disabled = false
+success_symbol = '[⮞](bold fg:green)'
+error_symbol = '[⮞](bold fg:red)'
+vimcmd_symbol = '[⮜](bold:green)'
+vimcmd_replace_one_symbol = '[⮜](bold:yellow)'
+vimcmd_replace_symbol = '[⮜](bold:yellow)'
+vimcmd_visual_symbol = '[⮜](bold:yellow)'

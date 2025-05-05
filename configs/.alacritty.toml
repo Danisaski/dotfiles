@@ -1,0 +1,91 @@
+################################################################################
+# Alacritty Configuration File - Optimized for Performance and Neovim
+#
+# This configuration is based on the documentation available at:
+# https://alacritty.org/config-alacritty.html
+#
+# Key optimizations:
+#   • Transparent background with window opacity set below 1.0.
+#   • Minimal window padding and simple (or no) decorations.
+#   • A modest scrollback buffer.
+#   • Font settings tuned for legibility and performance.
+################################################################################
+
+# General settings
+[general]
+live_config_reload = true
+
+[env]
+# You can add any environment variables to be passed to the shell here.
+# For example:
+#  PATH = "/usr/local/bin:$PATH"
+
+[window]
+# Set dimensions in columns and lines (not pixels) for a modest default size.
+# dimensions = { columns = 120, lines = 30 }
+# position = "None"
+# padding = { x = 0, y = 0 }
+# Disable dynamic padding for consistent performance.
+# dynamic_padding = true
+# Use no window decorations (or choose "Full" if you prefer a title bar and borders).
+decorations = "None"
+# Set opacity to a value less than 1.0 for a transparent background.
+opacity = 0.95
+# startup_mode = "Windowed"
+# title = "Alacritty"
+# Disable dynamic title changes for less work on each update.
+# dynamic_title = false
+# Resize window by increments equal to cell dimensions (helps in snap sizing).
+# resize_increments = true
+
+[scrolling]
+history = 10000   # Scrollback history: 10,000 lines.
+multiplier = 3    # Each scroll step moves three lines.
+
+[font]
+# Use a modern, programming-friendly font.
+normal = { family = "CaskaydiaCoveNerdFontMono", style = "Regular" }
+# You may also specify bold/italic if desired; these will fall back to the normal font if omitted.
+size = 16.0
+# offset = { x = 0, y = 2}
+# glyph_offset = { x = 0, y = 0 }
+# Use the built-in box drawing glyphs to ensure crisp lines.
+# builtin_box_drawing = true
+
+[colors]
+# Transparent background can be applied to all cells.
+transparent_background_colors = true
+# When true, bold text will use the bright variants of colors.
+# draw_bold_text_with_bright_colors = true
+
+# [colors.primary]
+# foreground = "#d8d8d8"
+# # The background color here is less important because the window opacity
+# # (set in [window].opacity) and transparent_background_colors make it see-through.
+# background = "#000000"
+#
+# [colors.normal]
+# black   = "#121212"
+# red     = "#ff5555"
+# green   = "#50fa7b"
+# yellow  = "#f1fa8c"
+# blue    = "#bd93f9"
+# magenta = "#ff79c6"
+# cyan    = "#8be9fd"
+# white   = "#bbbbbb"
+#
+# [colors.bright]
+# black   = "#555555"
+# red     = "#ff6e67"
+# green   = "#5af78e"
+# yellow  = "#f4f99d"
+# blue    = "#c6c5fe"
+# magenta = "#ff92d0"
+# cyan    = "#9aedfe"
+# white   = "#e6e6e6"
+
+[terminal]
+# Use your preferred shell (here using Zsh in login mode to load user configuration)
+shell = { program = "/bin/zsh", args = ["-l"] }
+
+
