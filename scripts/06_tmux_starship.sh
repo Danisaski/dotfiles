@@ -4,6 +4,10 @@ echo "[*] Installing Tmux + Starship configs..."
 
 source "$(dirname "$0")/../.env"
 
-cp ./configs/.tmux.conf ~/
+ln -sfn "$(dirname "$0")/../configs/.tmux.conf" ~/.tmux.conf
+
 mkdir -p ~/.config
-cp ./configs/starship.toml ~/.config/
+
+ln -sfn "$(dirname "$0")/../configs/starship.toml" ~/.config/starship.toml
+
+ln -sfn "$(dirname "$0")/../configs/config" ~/.config/ghostty/config

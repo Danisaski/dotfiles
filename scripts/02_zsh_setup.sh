@@ -18,4 +18,4 @@ ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ] && \
     git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
-cp ./configs/.zshrc ~/
+ln -sfn "$(dirname "$0")/../configs/.zshrc" ~/.zshrc
