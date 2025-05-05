@@ -3,7 +3,11 @@ Dotfiles for my development environment
 
 # Clone the dotfiles
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dev
+git clone https://github.com/Danisaski/dotfiles.git ~/dev
+```
+
+```bash
+git clone git@github.com:Danisaski/dotfiles.git ~/dev
 ```
 
 # Make scripts executable
