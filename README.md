@@ -1,7 +1,4 @@
-# dotfiles
-Dotfiles for my development environment
-
-# Clone the dotfiles
+# Installation: clone the dotfiles
 ```bash
 git clone --recurse-submodules https://github.com/Danisaski/dotfiles.git ~/dev
 ```
@@ -22,7 +19,8 @@ chmod +x setup.sh scripts/*.sh
 ```
 
 
-<details><summary>🔧 Legacy instructions (click to expand)</summary>
+<details><summary>🔧 Legacy instructions (IGNORE) (click to expand)</summary>
+  
 # Development Environment Setup Guide
 
 This guide provides setup instructions for both Arch Linux and Ubuntu/Debian WSL2 environments, focusing on a development setup with Zsh, Python, Rust, and Neovim.
