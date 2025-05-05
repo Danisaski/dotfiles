@@ -18,8 +18,9 @@ chmod +x setup.sh scripts/*.sh
 ./setup.sh
 ```
 
-## Pleasant development experience, overview
-![Configuration overview](configs/nvim/images/neofetch.png)
+## Pleasant development experience
+![Terminal overview](https://github.com/Danisaski/neodafer/blob/93e4b52af0d80ae918d3b730932c0e3633b8d270/images/neofetch_desktop.png)
+![Neovim setup](https://github.com/Danisaski/neodafer/blob/93e4b52af0d80ae918d3b730932c0e3633b8d270/images/neovim.png)
 
 <details><summary>🔧 Legacy instructions (IGNORE) (click to expand)</summary>
   
