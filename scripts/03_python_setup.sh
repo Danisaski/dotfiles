@@ -2,7 +2,8 @@
 
 echo "[*] Setting up Python..."
 
-source "$(dirname "$0")/../.env"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/../.env"
 
 sudo pacman -S --noconfirm python python-pip python-virtualenv
 

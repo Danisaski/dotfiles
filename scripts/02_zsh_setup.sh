@@ -2,10 +2,11 @@
 
 echo "[*] Setting up Zsh and Oh My Zsh..."
 
-source "$(dirname "$0")/../.env"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/../.env"
 
 if [ "$(basename $SHELL)" != "zsh" ]; then
-    chsh -s $(which zsh)
+    chsh -s "$(which zsh)"
 fi
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -14,8 +15,8 @@ fi
 
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 [ ! -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ] && \
-    git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
 [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ] && \
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 
-ln -sfn "$(dirname "$0")/../configs/.zshrc" ~/.zshrc
+ln -sfn "$SCRIPT_DIR/../configs/.zshrc" ~/.zshrc
