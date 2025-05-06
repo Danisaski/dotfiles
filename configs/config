@@ -14,7 +14,7 @@ theme = GruvboxDark
 
 # Font settings
 font-family = "CaskaydiaCove Nerd Font Mono"
-font-size = 18.0
+font-size = 16.0
 
 # Window behavior
 background-opacity = 0.90  
