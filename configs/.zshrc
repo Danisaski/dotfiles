@@ -29,9 +29,6 @@ if [[ -z "$TMUX" ]]; then
         # Create second window for Neovim
         tmux new-window -t dev:2
 
-        # Create third window for long-running processes
-        tmux new-window -t dev:3
-
         # Attach to the first window
         tmux select-window -t dev:1
         tmux attach -t dev
