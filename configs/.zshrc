@@ -16,9 +16,26 @@ source ~/code/python/venvs/denv/bin/activate
 # Add cargo to path
 source "$HOME/.cargo/env"
 
-# Automatically start Tmux on terminal open
+# Automatically attach to the last session or create a new one
 if [[ -z "$TMUX" ]]; then
-    tmux
+    # Check for existing sessions
+    if tmux ls &>/dev/null; then
+        # Attach to the last session
+        tmux attach -t $(tmux ls -F "#{session_name}" | tail -n1)
+    else
+        # Create a new "dev" session with specific windows
+        tmux new-session -d -s dev
+
+        # Create second window for Neovim
+        tmux new-window -t dev:2
+
+        # Create third window for long-running processes
+        tmux new-window -t dev:3
+
+        # Attach to the first window
+        tmux select-window -t dev:1
+        tmux attach -t dev
+    fi
 fi
 
 # Always start in the home directory
