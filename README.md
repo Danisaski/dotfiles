@@ -4,8 +4,7 @@
 ```bash
 git clone --recurse-submodules https://github.com/Danisaski/dotfiles.git ~/dev
 ```
-
-#### With SSH privileges
+or with SSH privileges
 
 ```bash
 git clone --recurse-submodules git@github.com:Danisaski/dotfiles.git ~/dev
