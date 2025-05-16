@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/../.env"
 
 if [ "$(basename $SHELL)" != "zsh" ]; then
-    chsh -s "$(which zsh)"
+    chsh -s /usr/bin/zsh
 fi
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
